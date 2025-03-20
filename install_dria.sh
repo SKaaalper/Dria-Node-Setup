@@ -6,11 +6,11 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 clear
-echo -e "\e[1;34m==========================================\e[0m"
-echo -e "\e[1;32m=        Dria Compute Node Setup       =\e[0m"
-echo -e "\e[1;36m=     https://t.me/KatayanAirdropGnC   =\e[0m"
-echo -e "\e[1;33m=              Batang Eds              =\e[0m"
-echo -e "\e[1;34m==========================================\e[0m\n"
+echo -e "\e[1;34m==============================================\e[0m"
+echo -e "\e[1;32m=            DRIA COMPUTE NODE SETUP        =\e[0m"
+echo -e "\e[1;36m=          https://t.me/KatayanAirdropGnC   =\e[0m"
+echo -e "\e[1;33m=                Batang Eds & cc3           =\e[0m"
+echo -e "\e[1;34m==============================================\e[0m\n"
 
 WORK_DIR="/root/dria-node"
 echo -e "\e[1;35mWorking directory:\e[0m $WORK_DIR"
