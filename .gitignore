@@ -1,0 +1,5 @@
+*.log
+*.tmp
+*.bak
+nohup.out
+install_dria.sh
