@@ -1,7 +1,9 @@
+# Ignore log, cache, and tmp files
 *.log
 *.cache
 *.tmp
-/root/dria-node/dkn.log
-/root/dria-node/*.log
-/root/dria-node/*.cache
-/root/dria-node/*.tmp
+
+# Ignore files in the dria-node directory specifically
+dria-node/*.log
+dria-node/*.cache
+dria-node/*.tmp
