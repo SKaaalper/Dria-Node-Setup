@@ -4,7 +4,9 @@ curl -L https://raw.githubusercontent.com/SKaaalper/Dria-Node-Setup/main/install
 ```
 ▶️ Follow prompts to enter:
 ➖ **EVM Private Key**: Your Own Private Key, Always use burner Wallet.
+
 ➖ **models**: I choose 2 model for my VPS 3 server `gemini 1.5- flash` and `gemini2.0-flash`.
+
 ➖ **API keys**: Get your API Keys [Here](https://aistudio.google.com/app/apikey) ▶️ Register Account ▶️ Click **Create API Key** ▶️ Copy your key and save it.
 
 ![image](https://github.com/user-attachments/assets/50768b54-aca9-4008-835b-79f3e05db524)
