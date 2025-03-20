@@ -57,7 +57,6 @@ dkn-compute-launcher start
 
 # Keep the node running in the background
 nohup dkn-compute-launcher start > $WORK_DIR/dkn.log 2>&1 &
-echo -e "\e[1;32mDria Compute Node is now running in the background 24/7!\e[0m"
 
 # Display log locations
 echo -e "\e[1;34mCheck logs:\e[0m"
