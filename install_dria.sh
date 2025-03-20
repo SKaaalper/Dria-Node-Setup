@@ -6,11 +6,10 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 clear
-echo -e "\e[1;34m==============================================\e[0m"
-echo -e "\e[1;32m=        🚀 Dria Compute Node Setup 🚀      =\e[0m"
-echo -e "\e[1;36m=     📢 https://t.me/KatayanAirdropGnC     =\e[0m"
-echo -e "\e[1;33m=                🎯 Batang Eds              =\e[0m" 
-echo -e "\e[1;34m==============================================\e[0m\n"
+echo -e "\e[1;34m==================================================\e[0m"
+echo -e "\e[1;32m=        🚀 Dria Compute Node Setup 🚀          =\e[0m"
+echo -e "\e[1;36m=     📢 https://t.me/KatayanAirdropGnC         =\e[0m"
+echo -e "\e[1;34m==================================================\e[0m\n"
 
 WORK_DIR="/root/dria-node"
 echo -e "\e[1;35mWorking directory:\e[0m $WORK_DIR"
@@ -39,24 +38,29 @@ fi
 echo -e "\e[1;32mInstalling Dria Compute Launcher...\e[0m"
 curl -fsSL https://dria.co/launcher | bash
 
-# 6. Start Dria Compute Launcher BEFORE asking for keys
+# 6. Start Dria Compute Launcher (background process)
 echo -e "\e[1;32mStarting Dria Compute Node Setup...\e[0m"
-dkn-compute-launcher start
+nohup dkn-compute-launcher start > $WORK_DIR/dkn_setup.log 2>&1 &
 
-# 7. Prompt user to enter their private key and API key
+# 7. Wait for Dria Compute Launcher to initialize
+sleep 10
+
+# 8. Prompt user to enter their private key and API key
 read -p "Enter your Wallet Private Key: " WALLET_PRIVATE_KEY
 read -p "Enter your API Key: " API_KEY
 
-# 8. Configure Compute Node (automated inputs)
+# 9. Configure Compute Node
 echo -e "\e[1;32mConfiguring Compute Node...\e[0m"
 echo "$WALLET_PRIVATE_KEY" | dkn-compute-launcher set-key
 echo "$API_KEY" | dkn-compute-launcher set-api-key
 
-# 9. Run the node in the background
+# 10. Restart and run Dria Compute Node in the background
 nohup dkn-compute-launcher start > $WORK_DIR/dkn.log 2>&1 &
+
 echo -e "\e[1;32mDria Compute Node is now running in the background!\e[0m"
 
-# 10. Display log locations
+# 11. Display log locations
 echo -e "\e[1;34mCheck logs:\e[0m"
 echo -e "\e[1;36m- Dria Compute Node:\e[0m $WORK_DIR/dkn.log"
 echo -e "\e[1;33mTo stop the node, use: \e[0m\e[1;31mpkill -f dkn-compute-launcher\e[0m"
+
