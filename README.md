@@ -2,7 +2,8 @@
 ```
 curl -L https://raw.githubusercontent.com/SKaaalper/Dria-Node-Setup/main/install_dria.sh -o install_dria.sh && chmod +x install_dria.sh && ./install_dria.sh
 ```
-▶️ Follow prompts to enter:
+### ▶️ Follow prompts to enter:
+
 ➖ **EVM Private Key**: Your Own Private Key, Always use burner Wallet.
 
 ➖ **models**: I choose 2 model for my VPS 3 server `gemini 1.5- flash` and `gemini2.0-flash`.
@@ -14,7 +15,7 @@ curl -L https://raw.githubusercontent.com/SKaaalper/Dria-Node-Setup/main/install
 ➖ Skip Jina & Serper API key by pressing Enter
 - Ctrl + C to skip logs
 
-## Check logs:
+### Check logs:
 ```
 tail -f /root/dria-node/dkn.log
 ```
