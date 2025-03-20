@@ -55,12 +55,6 @@ screen -dmS Dria-Node
 echo -e "\e[1;32mStarting Dria Compute Node Setup...\e[0m"
 dkn-compute-launcher start
 
-# Prompt user to enter necessary information
-echo -e "\e[1;32mFollow the prompts to configure your Compute Node\e[0m"
-echo -e "\e[1;36m- Use a burner EVM Private Key\e[0m"
-echo -e "\e[1;36m- Select models (Recommended: gemini-1.5-flash, gemini-2.0-flash)\e[0m"
-echo -e "\e[1;36m- Get API Keys from: https://aistudio.google.com/app/apikey\e[0m"
-
 # Keep the node running in the background
 nohup dkn-compute-launcher start > $WORK_DIR/dkn.log 2>&1 &
 echo -e "\e[1;32mDria Compute Node is now running in the background 24/7!\e[0m"
