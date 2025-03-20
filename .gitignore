@@ -1,5 +1,7 @@
 *.log
+*.cache
 *.tmp
-*.bak
-nohup.out
-install_dria.sh
+/root/dria-node/dkn.log
+/root/dria-node/*.log
+/root/dria-node/*.cache
+/root/dria-node/*.tmp
