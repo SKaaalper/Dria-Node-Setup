@@ -9,7 +9,7 @@ clear
 echo -e "\e[1;34m==============================================\e[0m"
 echo -e "\e[1;32m=        🚀 Dria Compute Node Setup 🚀      =\e[0m"
 echo -e "\e[1;36m=     📢 https://t.me/KatayanAirdropGnC     =\e[0m"
-echo -e "\e[1;33m=         🎯 Batang Eds Community          =\e[0m"
+echo -e "\e[1;33m=                 🎯 Batang Eds              =\e[0m"
 echo -e "\e[1;34m==============================================\e[0m\n"
 
 WORK_DIR="/root/dria-node"
