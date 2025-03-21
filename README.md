@@ -26,8 +26,11 @@ tail -f /root/dria-node/dkn.log
 dkn-compute-launcher referrals
 ```
 ➖ Choose: **Get referral code to refer someone** to get your refferal code.
+
 ➖ Choose: **Enter referral code to be referred** If someone referred you. 
+
 ➖ My refferal Code: `HF79ZMMnyPiQtsmEp7zs`
+
 ➖ Go to dashboard Connect your wallet: [Here](https://dria.co/edge-ai/my-node)
 
 ![image](https://github.com/user-attachments/assets/557620f9-32c1-4d36-a222-120fb5b62af3)
