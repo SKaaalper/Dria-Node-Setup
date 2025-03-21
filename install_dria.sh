@@ -48,9 +48,6 @@ cargo install --git https://github.com/firstbatchxyz/dkn-compute-launcher
 # Verify Installation
 which dkn-compute-launcher
 
-# Start a screen session
-screen -dmS Dria-Node
-
 # Start Dria Compute Launcher
 echo -e "\e[1;32mStarting Dria Compute Node Setup...\e[0m"
 dkn-compute-launcher start
@@ -60,5 +57,5 @@ nohup dkn-compute-launcher start > $WORK_DIR/dkn.log 2>&1 &
 
 # Display log locations
 echo -e "\e[1;34mCheck logs:\e[0m"
-echo -e "\e[1;36m- Dria Compute Node:\e[0m $WORK_DIR/dkn.log"
+echo -e "\e[1;36m- Dria Compute Node:\e[0m tail -f $WORK_DIR/dkn.log"
 echo -e "\e[1;33mTo stop the node, use: \e[0m\e[1;31mpkill -f dkn-compute-launcher\e[0m"
