@@ -13,8 +13,11 @@ curl -L https://raw.githubusercontent.com/SKaaalper/Dria-Node-Setup/main/install
 ![image](https://github.com/user-attachments/assets/50768b54-aca9-4008-835b-79f3e05db524)
 
 ➖ Skip Jina & Serper API key by pressing Enter
+
 ➖ To detach: `Ctrl+A then D`
+
 ➖ To view logs: `screen -r dria`
+
 
 ### To get your refferal code:
 ```
