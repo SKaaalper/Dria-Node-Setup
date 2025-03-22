@@ -24,7 +24,7 @@ sudo ufw allow 4001
 
 # Update & install dependencies
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl bash build-essential git
+sudo apt install -y curl bash build-essential git screen
 
 # Install Rust
 if ! command -v rustc &> /dev/null; then
@@ -48,14 +48,12 @@ cargo install --git https://github.com/firstbatchxyz/dkn-compute-launcher
 # Verify Installation
 which dkn-compute-launcher
 
-# Start Dria Compute Launcher
-echo -e "\e[1;32mStarting Dria Compute Node Setup...\e[0m"
-dkn-compute-launcher start
+# Start Dria Compute Launcher inside a screen session
+echo -e "\e[1;32mLaunching Dria Compute Node inside a screen session named 'dria'...\e[0m"
+screen -dmS dria dkn-compute-launcher start
 
-# Keep the node running in the background
-nohup dkn-compute-launcher start > $WORK_DIR/dkn.log 2>&1 &
-
-# Display log locations
-echo -e "\e[1;34mCheck logs:\e[0m"
-echo -e "\e[1;36m- Dria Compute Node:\e[0m tail -f $WORK_DIR/dkn.log"
-echo -e "\e[1;33mTo stop the node, use: \e[0m\e[1;31mpkill -f dkn-compute-launcher\e[0m"
+# Display instructions
+echo -e "\e[1;34mScreen session 'dria' started.\e[0m"
+echo -e "\e[1;36mTo view logs:\e[0m \e[1;33mscreen -r dria\e[0m"
+echo -e "\e[1;36mTo detach:\e[0m \e[1;33mCtrl+A then D\e[0m"
+echo -e "\e[1;36mTo stop the node:\e[0m \e[1;31mpkill -f dkn-compute-launcher\e[0m"
