@@ -2,6 +2,11 @@
 ```
 curl -L https://raw.githubusercontent.com/SKaaalper/Dria-Node-Setup/main/install_dria.sh -o install_dria.sh && chmod +x install_dria.sh && ./install_dria.sh
 ```
+➖ After Completed Download, Head to screen session:
+```
+screen -r dria
+```
+
 ### ▶️ Follow prompts to enter:
 
 ➖ **EVM Private Key**: Your Own Private Key, Always use burner Wallet.
